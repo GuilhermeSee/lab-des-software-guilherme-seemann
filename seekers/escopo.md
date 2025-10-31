@@ -71,23 +71,23 @@ Desenvolver uma plataforma web especializada que facilite a conexão entre jogad
 - Ferramentas: Git, Visual Studio Code, XAMPP, phpMyAdmin
  
 ## Cronograma 
-**Fase 1:** Pesquisa e Planejamento (Fev/2025)
+**Fase 1:** Pesquisa e Planejamento
 - Análise de requisitos e pesquisa da comunidade souls-like
 - Definição de funcionalidades prioritárias
 
-**Fase 2:** Modelagem e Prototipação (Mar/2025)
+**Fase 2:** Modelagem e Prototipação
 - Modelagem UML e prototipação da interface
 - Definição da arquitetura do sistema
 
-**Fase 3:** Desenvolvimento Core (Abr/2025)
+**Fase 3:** Desenvolvimento Core
 - Sistema de usuários e autenticação
 - Estrutura básica da plataforma
 
-**Fase 4:** Funcionalidades Principais (Mai/2025)
+**Fase 4:** Funcionalidades Principais
 - Implementação do matchmaking e perfis de jogador
 - Desenvolvimento do criador de builds e fórum
 
-**Fase 5:** Funcionalidades Avançadas (Jun/2025)
+**Fase 5:** Funcionalidades Avançadas 
 - Sistema de progresso compartilhado e notificações
 - Testes, documentação e deploy
 
@@ -98,7 +98,7 @@ Desenvolver uma plataforma web especializada que facilite a conexão entre jogad
 - Conhecimento técnico dos jogos do gênero para implementar funcionalidades específicas
 
 ## Restrições 
-- Prazo final para conclusão do projeto acadêmico (Jun/2025)
+- Prazo final para conclusão do projeto acadêmico
 - Limitações de orçamento para hospedagem e ferramentas premium
 - Impossibilidade de integração oficial com APIs dos jogos
 - Desenvolvimento individual (um desenvolvedor)
