@@ -28,7 +28,7 @@ Desenvolver uma plataforma web especializada que facilite a conexão entre jogad
 - Desenvolver sistema de perfis de usuário com histórico de atividades, estatísticas de jogos e sistema de reputação
 
 # 4. Escopo do Projeto
-O escopo detalhado do projeto está documentado no arquivo [escopo.md](escopo.md)
+O escopo detalhado do projeto está documentado no arquivo [escopo.md](seekers/escopo.md)
 
 # 5. Tecnologias
 
