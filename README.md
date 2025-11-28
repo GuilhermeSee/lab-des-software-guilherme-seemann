@@ -107,25 +107,71 @@ Para executar o projeto localmente, você precisará ter instalado:
 - Navegador web moderno com suporte a JavaScript
 
 # 7. Instalação
-Exemplos passo-a-passo que informam o que executar para ter um ambiente de desenvolvimento em execução.
 
-A ser incluído posteriormente.
+### Pré-requisitos:
+- XAMPP (Apache + MySQL + PHP 8.0+)
+- Navegador web moderno
 
-Funcionalidades e Demonstração da Aplicação
-Funcionalidade 1: descrição da funcionalidade 1
-Funcionalidade 2: descrição da funcionalidade 2
+### Passo a passo:
 
-*A ser incluído posteriormente.*
+1. **Configurar XAMPP:**
+   - Iniciar Apache e MySQL no XAMPP Control Panel
+
+2. **Criar Banco de Dados:**
+   - Acessar http://localhost/phpmyadmin
+   - Importar o arquivo: `database/seekers.sql`
+
+3. **Instalar Arquivos:**
+   - Copiar pasta `seekers_projeto` para: `C:\xampp\htdocs\seekers_projeto`
+
+4. **Acessar Sistema:**
+   - Abrir navegador em: http://localhost/seekers_projeto
+
+### Usuário de Teste:
+- **Username:** admin
+- **Senha:** password
+
+## Funcionalidades e Demonstração da Aplicação
+
+### Sistema de Autenticação
+- Cadastro de usuários com validação completa (HTML5 + JavaScript + PHP)
+- Login seguro com senhas criptografadas (password_hash)
+- Controle de sessões PHP
+- Perfis personalizados com plataformas e jogos preferidos
+
+### Sistema de Builds
+- Criação de builds personalizadas com atributos (vigor, força, destreza, inteligência, fé)
+- Equipamentos detalhados (armas, armaduras, anéis)
+- Cálculo automático de nível baseado nos atributos
+- Sistema de curtidas com AJAX
+- Busca dinâmica por nome e jogo
+- Sistema de favoritos
+
+### Sistema de Sessões de Jogo
+- Criação de sessões cooperativas por jogo e plataforma
+- Tipos de sessão: Boss Fight, Cooperativo, PvP
+- Sistema de participação com solicitações
+- Chat em tempo real entre participantes
+- Notificações de atividades
+
+### Interface e Experiência
+- Design responsivo inspirado em Elden Ring Nightreign
+- Tema dark com paleta azul/roxo/prateado
+- Dashboard personalizado com estatísticas
+- Sistema de notificações em tempo real
+- Páginas de favoritos e gerenciamento de perfil
 
 # 8. Acesso ao projeto
-Caso o projeto esteja no ar com algum serviço de hospedagem, disponibilizar o link para o mesmo. Caso contrário, indicar como o usuário pode baixar o projeto, abrir e executar.
 
-*A ser incluído posteriormente.*
+**EM DESENVOLVIMENTO**
 
 # 9. Licença
-Geralmente, os repositórios públicos no GitHub são utilizados para compartilhar softwares de código aberto. Porém, para que um repositório seja realmente de código aberto, ele precisa obter uma licença para que outros tenham a liberdade de usar, alterar e distribuir o software.
 
-*A ser incluído posteriormente.*
+Este projeto foi desenvolvido para fins acadêmicos como parte da disciplina de Laboratório de Desenvolvimento de Software do IFRS Campus Canoas.
+
+**Uso Acadêmico:** Permitido 
+**Uso Comercial:** Não autorizado sem permissão expressa
+**Modificações:** Permitidas 
 
 # 10. Agradecimentos
 (Acknowledgements em inglês) é um espaço opcional para dar crédito a pessoas, projetos, ou bibliotecas que ajudaram no desenvolvimento do seu projeto, como inspiração, recursos, ou colaboração. É uma forma de reconhecer a ajuda recebida e pode ser incluída para melhorar a usabilidade do projeto e a transparência.
