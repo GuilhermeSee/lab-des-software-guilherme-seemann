@@ -39,6 +39,9 @@ CREATE TABLE sessoes_jogo (
     descricao TEXT,
     criador_id INT,
     status VARCHAR(20) DEFAULT 'aberta',
+    data_sessao DATE,
+    horario TIME,
+    max_participantes INT DEFAULT 4,
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (criador_id) REFERENCES usuarios(id) ON DELETE CASCADE
 );
@@ -53,92 +56,87 @@ CREATE TABLE participantes_sessao (
     UNIQUE KEY unique_participante (sessao_id, usuario_id)
 );
 
-CREATE TABLE topicos_forum (
+CREATE TABLE contatos (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    titulo VARCHAR(200) NOT NULL,
-    categoria VARCHAR(50) NOT NULL,
-    jogo VARCHAR(50),
-    autor_id INT,
-    conteudo TEXT NOT NULL,
-    fixado BOOLEAN DEFAULT false,
-    fechado BOOLEAN DEFAULT false,
-    visualizacoes INT DEFAULT 0,
-    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    ultima_atividade TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    FOREIGN KEY (autor_id) REFERENCES usuarios(id) ON DELETE CASCADE
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    assunto VARCHAR(200) NOT NULL,
+    mensagem TEXT NOT NULL,
+    data_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    respondido BOOLEAN DEFAULT false
 );
 
-CREATE TABLE respostas_forum (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    topico_id INT,
-    autor_id INT,
-    conteudo TEXT NOT NULL,
-    data_resposta TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (topico_id) REFERENCES topicos_forum(id) ON DELETE CASCADE,
-    FOREIGN KEY (autor_id) REFERENCES usuarios(id) ON DELETE CASCADE
-);
-
-CREATE TABLE progresso_jogos (
+CREATE TABLE curtidas_builds (
     id INT AUTO_INCREMENT PRIMARY KEY,
     usuario_id INT,
-    jogo VARCHAR(50) NOT NULL,
-    bosses_derrotados JSON,
-    itens_encontrados JSON,
-    conquistas JSON,
-    horas_jogadas INT DEFAULT 0,
-    nivel_personagem INT,
-    ultima_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    build_id INT,
+    data_curtida TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE,
-    UNIQUE KEY unique_progresso (usuario_id, jogo)
+    FOREIGN KEY (build_id) REFERENCES builds(id) ON DELETE CASCADE,
+    UNIQUE KEY unique_curtida (usuario_id, build_id)
 );
 
-CREATE TABLE parcerias (
+CREATE TABLE builds_favoritas (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    jogador1_id INT,
-    jogador2_id INT,
-    jogo VARCHAR(50) NOT NULL,
-    data_inicio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    data_fim TIMESTAMP NULL,
-    ativa BOOLEAN DEFAULT true,
-    FOREIGN KEY (jogador1_id) REFERENCES usuarios(id) ON DELETE CASCADE,
-    FOREIGN KEY (jogador2_id) REFERENCES usuarios(id) ON DELETE CASCADE,
-    UNIQUE KEY unique_parceria (jogador1_id, jogador2_id, jogo)
+    usuario_id INT,
+    build_id INT,
+    data_favorito TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE,
+    FOREIGN KEY (build_id) REFERENCES builds(id) ON DELETE CASCADE,
+    UNIQUE KEY unique_favorito_build (usuario_id, build_id)
+);
+
+CREATE TABLE sessoes_favoritas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT,
+    sessao_id INT,
+    data_favorito TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE,
+    FOREIGN KEY (sessao_id) REFERENCES sessoes_jogo(id) ON DELETE CASCADE,
+    UNIQUE KEY unique_favorito_sessao (usuario_id, sessao_id)
 );
 
 CREATE TABLE notificacoes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     usuario_id INT,
     tipo VARCHAR(50) NOT NULL,
-    titulo VARCHAR(100) NOT NULL,
+    titulo VARCHAR(200) NOT NULL,
     mensagem TEXT NOT NULL,
-    data_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     lida BOOLEAN DEFAULT false,
     dados_extras JSON,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
 );
 
-CREATE TABLE amizades (
+CREATE TABLE solicitacoes_participacao (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    usuario1_id INT,
-    usuario2_id INT,
+    sessao_id INT,
+    solicitante_id INT,
     status VARCHAR(20) DEFAULT 'pendente',
     data_solicitacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     data_resposta TIMESTAMP NULL,
-    FOREIGN KEY (usuario1_id) REFERENCES usuarios(id) ON DELETE CASCADE,
-    FOREIGN KEY (usuario2_id) REFERENCES usuarios(id) ON DELETE CASCADE,
-    UNIQUE KEY unique_amizade (usuario1_id, usuario2_id)
+    FOREIGN KEY (sessao_id) REFERENCES sessoes_jogo(id) ON DELETE CASCADE,
+    FOREIGN KEY (solicitante_id) REFERENCES usuarios(id) ON DELETE CASCADE,
+    UNIQUE KEY unique_solicitacao (sessao_id, solicitante_id)
 );
 
-CREATE TABLE avaliacoes (
+CREATE TABLE mensagens_sessao (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    avaliador_id INT,
-    avaliado_id INT,
     sessao_id INT,
-    nota INT CHECK (nota BETWEEN 1 AND 5),
-    comentario TEXT,
-    data_avaliacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (avaliador_id) REFERENCES usuarios(id) ON DELETE CASCADE,
-    FOREIGN KEY (avaliado_id) REFERENCES usuarios(id) ON DELETE CASCADE,
+    usuario_id INT,
+    mensagem TEXT NOT NULL,
+    tipo VARCHAR(20) DEFAULT 'mensagem',
+    data_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (sessao_id) REFERENCES sessoes_jogo(id) ON DELETE CASCADE,
-    UNIQUE KEY unique_avaliacao (avaliador_id, avaliado_id, sessao_id)
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
+);
+
+CREATE TABLE mensagens_lidas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT,
+    sessao_id INT,
+    ultima_leitura TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE,
+    FOREIGN KEY (sessao_id) REFERENCES sessoes_jogo(id) ON DELETE CASCADE,
+    UNIQUE KEY unique_leitura (usuario_id, sessao_id)
 );
