@@ -2,7 +2,7 @@
 **Nome do Projeto:** Seekers - Plataforma de Conexão para Jogadores de Souls-like  
 **Autor:** Guilherme Seemann  
 **Orientador:** Clarissa Castellã Xavier  
-**Data:** [Data de Aprovação]  
+**Data:** Dezembro 2025  
 
 ## Introdução e Visão Geral 
  
@@ -44,11 +44,14 @@ Desenvolver uma plataforma web especializada que facilite a conexão entre jogad
 - ✅ Sistema de mensagens em tempo real nas sessões
 - ✅ Gerenciamento de perfil com plataformas e jogos preferidos
 - ✅ Sistema de favoritos para builds e sessões
+- ✅ Chat com IA especializada (Arauto Esmeralda) usando Google Gemini
+- ✅ Sistema de contato para suporte
+- ✅ Cálculo automático de nível baseado em atributos das builds
 
 **Funcionais (Não Implementados):**
-- ❌ Fórum de discussões com categorias por jogo
-- ❌ Sistema de amizades e grupos de jogo
-- ❌ Sistema de avaliação e feedback entre jogadores
+- ❌ Fórum de discussões com categorias por jogo (substituído por chat em sessões)
+- ❌ Sistema de amizades e grupos de jogo (substituído por sistema de favoritos)
+- ❌ Sistema de avaliação e feedback entre jogadores (substituído por curtidas)
 - ❌ Sistema de progresso colaborativo detalhado
  
 **Não Funcionais:** 
@@ -78,7 +81,9 @@ Desenvolver uma plataforma web especializada que facilite a conexão entre jogad
 - AJAX: jQuery para interações dinâmicas e chat em tempo real
 - Hospedagem: Otimizado para qualquer servidor PHP/MySQL
 - Ferramentas: Visual Studio Code, XAMPP, phpMyAdmin, Git
-- Design: Tema customizado inspirado em Elden Ring Nightreign
+- Design: Tema customizado inspirado em Elden Ring Nightreign com gradientes roxos/azuis
+- API Externa: Google Gemini AI para chat inteligente
+- Bibliotecas: PHPMailer para emails (preparado)
  
 ## Cronograma (Executado)
 **Fase 1: Pesquisa e Planejamento** ✅ Concluída
@@ -165,15 +170,17 @@ Desenvolver uma plataforma web especializada que facilite a conexão entre jogad
 
 **Taxa de Conclusão: 95%**
 
-**Data de Conclusão:** 
-**Ambiente:** Desenvolvimento local (XAMPP) + Otimizado para hospedagem online
-**Status:** Sistema funcional e operacional
+**Data de Conclusão:** Dezembro 2025
+**Ambiente:** Desenvolvimento local (XAMPP)
+**Status:** Sistema funcional e operacional em produção
 
 1. **Sistema Completo Implementado:**
-   - 15 páginas PHP funcionais
+   - 20+ páginas PHP funcionais
    - 12 tabelas no banco de dados com relacionamentos
    - 11 scripts AJAX para interações dinâmicas
    - Interface responsiva com tema customizado
+   - Chat com IA integrado usando Google Gemini
+   - Sistema de hospedagem online configurado
 
 2. **Funcionalidades Core 100% Operacionais:**
    - Autenticação segura com criptografia
@@ -191,9 +198,12 @@ Desenvolver uma plataforma web especializada que facilite a conexão entre jogad
 
 4. **Diferenciais Desenvolvidos:**
    - Chat em tempo real entre participantes
+   - Chat com IA especializada 
    - Busca dinâmica sem recarregar página
    - Sistema de notificações automáticas
    - Interface temática souls-like única
+   - Cálculo automático de nível das builds
+   - Sistema de hospedagem online funcional
 
 ### **Impacto e Resultados:**
 
@@ -205,4 +215,7 @@ Desenvolver uma plataforma web especializada que facilite a conexão entre jogad
 
 ### **Próximos Passos**
 
-- Hospedagem online para uso real da comunidade
+- ✅ Hospedagem online implementada e funcional
+- Sistema de ranking e reputação de usuários
+- Aplicativo mobile nativo
+- Moderação avançada de conteúdo
