@@ -1,0 +1,111 @@
+body {
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%);
+    color: #e8e8f0;
+    min-height: 100vh;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23000" width="1200" height="600"/></svg>');
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    color: #c0c0c0;
+    font-size: 3.5rem;
+    text-shadow: 0 0 20px rgba(192, 192, 192, 0.5);
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #b8b8d0;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #8a2be2, #4169e1);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #9932cc, #4682b4);
+    box-shadow: 0 6px 20px rgba(138, 43, 226, 0.5);
+    transform: translateY(-2px);
+}
+
+.card {
+    background: rgba(10, 10, 26, 0.9);
+    border: 1px solid #4a4a6a;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card-header {
+    background: linear-gradient(45deg, #8a2be2, #4169e1);
+    border-bottom: 1px solid #4a4a6a;
+}
+
+.form-control {
+    background: #1a1a2e;
+    border: 1px solid #4a4a6a;
+    color: #e8e8f0;
+}
+
+.form-control:focus {
+    background: #1a1a2e;
+    border-color: #8a2be2;
+    color: #e8e8f0;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.4);
+}
+
+.text-warning {
+    color: #c0c0c0 !important;
+}
+
+.alert-success {
+    background-color: rgba(40, 167, 69, 0.2);
+    border-color: #28a745;
+    color: #d4edda;
+}
+
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.2);
+    border-color: #dc3545;
+    color: #f8d7da;
+}
+
+.build-card {
+    transition: transform 0.3s;
+}
+
+.build-card:hover {
+    transform: translateY(-5px);
+}
+
+.sessao-card {
+    border-left: 4px solid #8a2be2;
+}
+
+.status-aberta {
+    color: #28a745;
+}
+
+.status-fechada {
+    color: #dc3545;
+}
+
+.build-relacionada {
+    background: linear-gradient(135deg, #2a2a3e 0%, #3a3a5e 100%);
+    border: 1px solid #5a5a7a;
+    transition: all 0.3s;
+}
+
+.build-relacionada:hover {
+    background: linear-gradient(135deg, #3a3a5e 0%, #4a4a7e 100%);
+    border-color: #8a2be2;
+    transform: translateY(-2px);
+}
