@@ -4,7 +4,7 @@
 - **Nome do Projeto:** Seekers - Plataforma de Conexão para Jogadores de Souls-like
 - **Autor:** Guilherme Seemann
 - **Orientador:** Clarissa Castellã Xavier
-- **Data de Aprovação:** [Data de Aprovação]
+- **Data de Aprovação:** Dezembro 2025
 
 # 2. Introdução e Visão Geral 
 
@@ -66,10 +66,11 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 **Funcionalidades Principais:**
 - Sistema de matchmaking inteligente para jogadores souls-like
 - Criador e compartilhador de builds personalizadas
-- Fórum de discussões categorizadas por jogo
-- Acompanhamento de progresso colaborativo entre parceiros
+- Chat com IA especializada usando Google Gemini
+- Sistema de sessões de jogo com chat em tempo real
 - Notificações em tempo real para atividades da comunidade
-- Sistema de perfis de jogador e reputação
+- Sistema de perfis de jogador com favoritos e estatísticas
+- Sistema de curtidas e favoritos para builds e sessões
 
 ## Funcionalidades Principais
 
@@ -85,17 +86,17 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 - Sistema de equipamentos (armas, armaduras, anéis)
 - Compartilhamento e versionamento de builds
 
-## Fórum Comunitário
-- Discussões categorizadas por jogo
-- Tópicos técnicos e estratégicos
-- Sistema de moderação
-- Busca avançada por conteúdo
+## Chat com IA Especializada
+- Assistente Arauto Esmeralda especializado em jogos souls-like
+- Integração com Google Gemini AI
+- Respostas personalizadas sobre builds, estratégias e dicas
+- Disponível 24/7 para todos os usuários
 
-## Progresso Colaborativo
-- Compartilhamento de conquistas em tempo real
-- Registro de bosses derrotados
-- Acompanhamento de itens encontrados
-- Estatísticas de progresso entre parceiros
+## Sistema de Sessões
+- Criação de sessões cooperativas por jogo e plataforma
+- Chat em tempo real entre participantes
+- Sistema de solicitações de participação
+- Notificações de atividades nas sessões
 
 # 6. Pré-Requisitos
 Para executar o projeto localmente, você precisará ter instalado:
@@ -122,13 +123,13 @@ Para executar o projeto localmente, você precisará ter instalado:
    - Importar o arquivo: `database/seekers.sql`
 
 3. **Instalar Arquivos:**
-   - Copiar pasta `seekers_projeto` para: `C:\xampp\htdocs\seekers_projeto`
+   - Copiar pasta `seekers_projetoFuncional` para: `C:\xampp\htdocs\seekers_projetoFuncional`
 
 4. **Acessar Sistema:**
-   - Abrir navegador em: http://localhost/seekers_projeto
+   - Abrir navegador em: http://localhost/seekers_projetoFuncional
 
 ### Usuário de Teste:
-- **Username:** admin
+- **Username:** admin2
 - **Senha:** password
 
 ## Funcionalidades e Demonstração da Aplicação
@@ -147,6 +148,11 @@ Para executar o projeto localmente, você precisará ter instalado:
 - Busca dinâmica por nome e jogo
 - Sistema de favoritos
 
+### Chat com IA Especializada
+- Integração com Google Gemini AI para respostas inteligentes
+- Disponível 24/7 para dúvidas sobre builds, estratégias e dicas
+- Interface de chat em tempo real
+
 ### Sistema de Sessões de Jogo
 - Criação de sessões cooperativas por jogo e plataforma
 - Tipos de sessão: Boss Fight, Cooperativo, PvP
@@ -163,14 +169,19 @@ Para executar o projeto localmente, você precisará ter instalado:
 
 # 8. Acesso ao projeto
 
-**EM DESENVOLVIMENTO**
+**PROJETO FUNCIONAL**
+
+- **Ambiente Local:** http://localhost/seekers_projetoFuncional (com XAMPP)
+- **Hospedagem Online:** Configurado para produção
+- **Banco de Dados:** MySQL hospedado em seekers.mysql.dbaas.com.br
+- **Status:** Sistema operacional e funcional
 
 # 9. Licença
 
 Este projeto foi desenvolvido para fins acadêmicos como parte da disciplina de Laboratório de Desenvolvimento de Software do IFRS Campus Canoas.
 
 **Uso Acadêmico:** Permitido 
-**Uso Comercial:** Não autorizado sem permissão expressa
+**Uso Comercial:** Permitido
 **Modificações:** Permitidas 
 
 # 10. Agradecimentos
