@@ -6,27 +6,25 @@
 
 ## Introdução e Visão Geral 
  
-Desenvolvimento de uma plataforma web especializada para a comunidade de jogadores de jogos souls-like (Dark Souls, Elden Ring, Bloodborne, Sekiro, etc.). A proposta é criar um ambiente centralizado que facilite a conexão entre jogadores para sessões cooperativas, compartilhamento de builds personalizadas, discussões comunitárias e acompanhamento colaborativo de progresso nos jogos. O sistema integrará funcionalidades atualmente dispersas em diferentes plataformas, oferecendo uma experiência unificada e especializada para a comunidade.
+Desenvolvimento de uma plataforma web especializada para a comunidade de jogadores de jogos souls-like (Dark Souls, Elden Ring, Bloodborne, Sekiro, etc.). A proposta é criar um ambiente centralizado que facilite a conexão entre jogadores para sessões cooperativas, compartilhamento de builds personalizadas, sessões entre jogadores com chat integrado e caht com integração da API do gemini. O sistema integrará funcionalidades atualmente dispersas em diferentes plataformas, oferecendo uma experiência unificada e especializada para a comunidade.
 
 ## Objetivos do Projeto
 **Objetivo Geral:**
-Desenvolver uma plataforma web especializada que facilite a conexão entre jogadores de jogos souls-like, oferecendo ferramentas integradas para matchmaking, compartilhamento de builds, discussões comunitárias e acompanhamento colaborativo de progresso nos jogos.
+Desenvolver uma plataforma web especializada que facilite a conexão entre jogadores de jogos souls-like, compartilhamento de builds personalizadas, sessões entre jogadores com chat integrado e chat com integração da API do gemini.
 
 **Objetivos Específicos:**
 - Implementar sistema de conexão inteligente que filtre jogadores por plataforma, jogo específico, preferências de modificação e estilo de sessão desejado
 - Desenvolver ferramenta social para criação e compartilhamento de builds baseada em atributos base do personagem e equipamentos utilizados
-- Criar fórum de discussões categorizadas por jogo específico e tópicos técnicos, com sistema de moderação e busca avançada
-- Implementar sistema de acompanhamento de progresso colaborativo que permita compartilhamento em tempo real de conquistas, itens encontrados e bosses derrotados
 - Desenvolver interface responsiva e intuitiva que funcione adequadamente em dispositivos desktop e mobile
+- Desenvolver sistema de chat com API do Gemini
 - Integrar sistema de notificações em tempo real para atividades de parceiros e atualizações da comunidade
 - Implementar medidas de segurança robustas para proteção de dados pessoais e prevenção de comportamentos inadequados
 - Desenvolver sistema de perfis de usuário com histórico de atividades, estatísticas de jogos e sistema de reputação
   
 ## Escopo do Projeto
 **Entregáveis:**
-- Plataforma web Seekers com sistema de matchmaking, compartilhamento de builds, fórum de discussões e acompanhamento de progresso
+- Plataforma web Seekers com sistema de matchmaking, compartilhamento de builds e chat entre jogadores e integração com IA.
 - Documentação técnica da plataforma
-- Manual do usuário para utilização
 - Código-fonte documentado e versionado
 
 **Requisitos:**  
@@ -55,19 +53,15 @@ Desenvolver uma plataforma web especializada que facilite a conexão entre jogad
 - ❌ Sistema de progresso colaborativo detalhado
  
 **Não Funcionais:** 
-- Performance otimizada para múltiplos usuários simultâneos
 - Interface responsiva para desktop e mobile seguindo princípios de usabilidade
-- Segurança robusta para proteção de dados pessoais
-- Disponibilidade com tempo de resposta otimizado
-- Escalabilidade para crescimento da base de usuários
- 
+
 **Exclusões (Confirmadas):**
 - Integração direta com APIs oficiais dos jogos (limitações das desenvolvedoras)
 - Sistema de chat de voz integrado
 - Sincronização automática com saves dos jogos
 - Aplicativo mobile nativo
 - Fórum de discussões (substituído por chat de sessões)
-- Sistema de amizades complexo (substituído por favoritos)
+- Sistema de amizades complexo (substituído por chat de sessões)
 - Sistema de avaliação entre jogadores (substituído por curtidas)
  
 ## Recursos Necessários
@@ -153,7 +147,6 @@ Desenvolver uma plataforma web especializada que facilite a conexão entre jogad
 - ✅ Chat em tempo real funciona nas sessões entre participantes
 - ✅ Notificações funcionam em tempo real para atividades relevantes
 - ✅ Interface é responsiva e funciona em diferentes dispositivos
-- ✅ Sistema suporta múltiplos usuários simultâneos
 - ✅ Sistema de curtidas e favoritos funciona com AJAX
 - ✅ Busca dinâmica de builds implementada
 - ✅ Dashboard com estatísticas personalizadas
@@ -177,7 +170,6 @@ Desenvolver uma plataforma web especializada que facilite a conexão entre jogad
 1. **Sistema Completo Implementado:**
    - 20+ páginas PHP funcionais
    - 12 tabelas no banco de dados com relacionamentos
-   - 11 scripts AJAX para interações dinâmicas
    - Interface responsiva com tema customizado
    - Chat com IA integrado usando Google Gemini
    - Sistema de hospedagem online configurado
