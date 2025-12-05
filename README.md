@@ -8,20 +8,18 @@
 
 # 2. Introdução e Visão Geral 
 
-Este projeto visa desenvolver uma plataforma web especializada que facilite a conexão entre jogadores de jogos souls-like (Dark Souls, Elden Ring, Bloodborne, Sekiro, etc.). A proposta é criar um ambiente centralizado que integre as diversas ferramentas e recursos atualmente dispersos no ecossistema da comunidade souls-like, oferecendo funcionalidades de matchmaking inteligente, compartilhamento de builds, discussões comunitárias e acompanhamento colaborativo de progresso nos jogos.
+Este projeto visa desenvolver uma plataforma web especializada que facilite a conexão entre jogadores de jogos souls-like (Dark Souls, Elden Ring, Bloodborne, Sekiro, etc.). A proposta é criar um ambiente centralizado que integre as diversas ferramentas e recursos atualmente dispersos no ecossistema da comunidade souls-like, oferecendo funcionalidades de sessões entre jogadores, compartilhamento de builds, chat com integração com IA para tirar dúvidas e chat colaborativo entre jogadores.
 
 A natureza cooperativa dos jogos souls-like, onde jogadores podem se auxiliar mutuamente para superar desafios complexos, cria uma demanda natural por ferramentas especializadas que facilitem a conexão entre membros da comunidade. Atualmente, os jogadores dependem de plataformas genéricas que não atendem às particularidades desta comunidade específica.
 
 # 3. Objetivos do Projeto
 
 **Objetivo Geral:**
-Desenvolver uma plataforma web especializada que facilite a conexão entre jogadores de jogos souls-like, oferecendo ferramentas integradas para matchmaking, compartilhamento de builds, discussões comunitárias e acompanhamento colaborativo de progresso nos jogos.
+Desenvolver uma plataforma web especializada que facilite a conexão entre jogadores de jogos souls-like, oferecendo funcionalidades de sessões entre jogadores, compartilhamento de builds, chat com integração com IA para tirar dúvidas e chat colaborativo entre jogadores.
 
 **Objetivos Específicos:**
 - Implementar sistema de conexão inteligente que filtre jogadores por plataforma, jogo específico, preferências de modificação e estilo de sessão desejado
 - Desenvolver ferramenta social para criação e compartilhamento de builds baseada em atributos base do personagem e equipamentos utilizados
-- Criar fórum de discussões categorizadas por jogo específico e tópicos técnicos, com sistema de moderação e busca avançada
-- Implementar sistema de acompanhamento de progresso colaborativo que permita compartilhamento em tempo real de conquistas, itens encontrados e bosses derrotados
 - Desenvolver interface responsiva e intuitiva que funcione adequadamente em dispositivos desktop e mobile
 - Integrar sistema de notificações em tempo real para atividades de parceiros e atualizações da comunidade
 - Implementar medidas de segurança robustas para proteção de dados pessoais e prevenção de comportamentos inadequados
